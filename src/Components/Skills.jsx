@@ -1,48 +1,120 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+
+function animateProgressBar(progress) {
+  const targetValue = parseInt(progress.getAttribute('value'));
+  const max = parseInt(progress.getAttribute('max'));
+  const animationDuration = 80000;
+  const step = targetValue / (animationDuration / 1000);
+
+  let current = 0;
+
+  const animation = setInterval(() => {
+    if (current < targetValue) {
+      current += step;
+      if (current > targetValue) {
+        current = targetValue;
+      }
+      progress.value = current;
+    } else {
+      progress.value = targetValue;
+      clearInterval(animation);
+    }
+  }, 10);
+}
+
+function handleDivHover() {
+  const progressBars = document.querySelectorAll('progress');
+  progressBars.forEach((progress) => {
+    animateProgressBar(progress);
+  });
+}
+
+const competencesData = [
+  {
+    category: 'Front-end',
+    skills: [
+      { label: 'HTML', value: 80 },
+      { label: 'CSS', value: 80 },
+      { label: 'JS', value: 50 },
+    ],
+  },
+  {
+    category: 'Back-end',
+    skills: [
+      { label: 'Symfony', value: 40 },
+      { label: 'PHP', value: 30 },
+    ],
+  },
+  {
+    category: 'Infographie UI UX',
+    skills: [
+      { label: 'Canva', value: 80 },
+      { label: 'Figma', value: 70 },
+      { label: 'Adobe XD', value: 50 },
+    ],
+  },
+];
 
 function Skills() {
-    return (
-        <>
-        <div className="content_competences" id="competences">
-        <h2>Compétences</h2>
-        <div  className="competences-section">
+  useEffect(() => {
+    const divContainer = document.getElementById('bar_front');
+    divContainer.addEventListener('mouseenter', handleDivHover);
 
-            <div className="photos-p">
-                <img className="projet_image_cv" src="src\assets\img\cv_photo.PNG" alt="Mbemba Nhora" style={{ height: '300px' }}></img>
+    return () => {
+      divContainer.removeEventListener('mouseenter', handleDivHover);
+    };
+  }, []);
+
+  return (
+    
+    <div className="content_competences" id="competences">
+      <h2>Mes Compétences</h2>
+      <div className="competences-section">
+<div className='content'>
+      <div>
+      <h2>Mes Activités</h2>
+      <ul>
+        <li>Basketball</li>
+        <li>Danse</li>
+        <li>Musique</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>skills</h2>
+      <ul>
+        <li>Autonomie</li>
+        <li>Travail d'équipe</li>
+        <li>Gestion de projets</li>
+      </ul>
+    </div>
+    <a href="./img/ressources/MBEMBA_Nhora_Developpeuse_d'application_multimédia.pdf" download="">
+        <button className="roll-button" type="button" >
+          Télécharger mon cv
+        </button>
+      </a>
+</div>
+        <div id="bar_front">
+          {competencesData.map((categoryData, index) => (
+            <div key={index}>
+              <p>
+                <strong>{categoryData.category}</strong>
+              </p>
+              {categoryData.skills.map((skill, skillIndex) => (
+                <React.Fragment key={skillIndex}>
+                  <label htmlFor={`file_${index}_${skillIndex}`}>{skill.label}</label>
+                  <progress id={`file_${index}_${skillIndex}`} max="100" value={skill.value}>
+                    {skill.value}%
+                  </progress>
+                </React.Fragment>
+              ))}
             </div>
-
-            <div id="bar_front">
-                <p><strong>Front-end</strong></p>
-                <label for="file">HTML</label>
-                <progress id="file_" max="100" value="70">70%</progress>
-                <label for="file">Css</label>
-                <progress id="file_" max="100" value="70">70%</progress>
-                <label for="file">Js</label>
-                <progress id="file_" max="100" value="40">40%</progress>
-
-                <p><strong>Back-end</strong></p>
-                <label for="file">Symfony</label>
-                <progress id="file_" max="100" value="40">40%</progress>
-                <label for="file">Php</label>
-                <progress id="file_" max="100" value="30">30%</progress>
-
-                <p><strong>infographie UI UX</strong></p>
-                <label for="file">Canva</label>
-                <progress id="file_" max="100" value="70">70%</progress>
-                <label for="file">Figma</label>
-                <progress id="file_" max="100" value="60">50%</progress>
-                <label for="file">Adobe XD</label>
-                <progress id="file_" max="100" value="50">50%</progress>
-            </div>
+          ))}
         </div>
-
-        <a href = "./img/ressources/MBEMBA_Nhora_Developpeuse_d'application_multimédia.pdf" Download = "">
-                <button className="roll-button" type = "button">Télécharger mon cv</button>
-        </a>
-
-	</div> 
-        </>
-        
-    )
+      </div>
+    </div>
+    
+  );
 }
+
 export default Skills;

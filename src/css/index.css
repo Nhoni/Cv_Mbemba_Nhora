@@ -2,22 +2,18 @@
 
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Poppins', Arial, sans-serif;
-    /* height: 100vh; */
 }
 
 header {
     background-color: #333;
 }
 
-main{
-  height:90vh;
-}
+
 
 /*------------------------------------------------------ NavBar -------------------------------------------------------- */
 
@@ -238,9 +234,9 @@ a:hover {
 
 /*------------------------------------------------------ Accueil -------------------------------------------------------- */
 
-/* MonComposant.css */
 
-/* Styles pour la section "Accueil" */
+
+
 .content_acc {
   display: flex;
   justify-content: center;
@@ -261,6 +257,17 @@ a:hover {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
+}
+.content_apropos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to left, #2b5876, #4e4376);
+  color: #fff;
+  text-align: center;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .acceuil-section:hover {
@@ -365,6 +372,7 @@ h1 {
   text-transform: uppercase;
   border-radius: 3px;
   transition: all 0.3s;
+
 }
 
 .roll-button:hover {
@@ -518,107 +526,126 @@ h1 {
 }
 
 .apropos-section a {
-  color: #f3900ec7;
+  color: #f3900eda;
 }
 
 .apropos-section a:hover {
   text-decoration: underline;
 }
 /*------------------------------------------------------ Compétences -------------------------------------------------------- */
+/* Styles pour la section de compétences */
+
 .content_competences {
+  background: url('../assets/img/pexels-tara-winstead-8386440.jpg');
+  color: #fff;
+  padding: 20px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 5rem;
+  justify-content: center;
+  
 }
 
+/* Styles pour la section de compétences - Titre */
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Styles pour la liste à puces d'activités */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.content{
+  margin-left: 6rem;
+}
+.content ul{
+  flex-direction: column;
+  align-items: center;
+}
+li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Styles pour la section de compétences - Compétences */
 .competences-section {
   display: flex;
-  gap: 10rem;
-  align-items: center;
-  text-align: left;
-  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
-.projet_image_cv:hover{
-  box-shadow: 10px 5px 5px grey ;
+/* Styles pour chaque compétence */
+.skills-category {
+  flex: 1;
+  margin-right: 20px;
 }
 
-label {
-  padding-right: 10px;
-  font-size: 1rem;
+/* Styles pour les compétences - Titre */
+.skills-category h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
-#file_ {
-  width: 700px;
+/* Styles pour les compétences - Liste à puces */
+.skills-category ul {
+  list-style-type: none;
+  padding: 0;
 }
 
+.skills-category li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Styles pour la barre de compétences */
 #bar_front {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20px;
+  flex: 2;
+  margin-left: 6rem;
+  margin-right: 3rem;
 }
 
+/* Styles pour la barre de compétences - Catégorie */
+#bar_front > div {
+  margin-bottom: 30px;
+}
+
+/* Styles pour la barre de compétences - Titre de catégorie */
 #bar_front p {
-  text-align: center;
-  margin-top: 30px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-/* Styles pour les tablettes et écrans plus petits */
-@media (max-width: 1023px) {
-  .content_competences {
-      margin: 2rem; 
-  }
-
-  .competences-section {
-      gap: 5rem; 
-      flex-direction: column; 
-  }
-
-  label {
-      padding-right: 5px; 
-      font-size: 0.8rem;
-  }
-
-  #file_ {
-      width: 100%; 
-  }
-
-  #bar_front {
-      padding-bottom: 10px;
-  }
+/* Styles pour la barre de compétences - Compétence */
+#bar_front label {
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
-/* Styles pour les petits écrans (téléphones) */
-@media (max-width: 767px) {
-  .content_competences {
-      margin: 1rem; 
-  }
-
-  .competences-section {
-      gap: 2rem;
-      flex-direction: column; 
-  }
-
-  label {
-      padding-right: 3px; 
-      font-size: 0.7rem;
-  }
-
-  #file_ {
-      width: 100%;
-  }
-
-  #bar_front {
-      padding-bottom: 5px; 
-  }
+/* Styles pour la barre de compétences - Barre de progression */
+#bar_front progress {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 10px;
 }
 
+/* Styles pour le bouton de téléchargement */
+.roll-button {
+  background-color: #b65709e2; /* Couleur de fond verte */
+  color: #fff; /* Couleur du texte claire */
+  padding: 15px 10px;
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: 3rem;
+}
 
-
-
-
-/* ------------------------------------------------------- Projet -------------------------------------------------------- */
+.content .roll-button:hover {
+  background-color: #45a06f; /* Couleur de fond verte foncée au survol */
+}
 
   progress {
     width: 100%;
@@ -634,6 +661,11 @@ label {
     
   }
 
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------- */
 .content_projet {
   padding: 1rem;
   display: flex;
@@ -840,7 +872,7 @@ button:hover {
 /*------------------------------------------------------ Footer-------------------------------------------------------- */
 footer {
     text-align: center;
-    background-color: #000000;
+    background-color: #333;;
     padding: 1.5rem;
 }
 

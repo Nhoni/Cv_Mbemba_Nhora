@@ -7,7 +7,7 @@ function Compétences() {
     return (
         <>
         <Nav/>
-        <main style={{ marginTop: '20rem',  height:'100vh'}}>
+        <main style={{ marginTop: '5rem',  height:'100vh'}}>
             <Skills />
         </main>
         <Footer />

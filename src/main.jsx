@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './css/index.css';
 import {createBrowserRouter,RouterProvider,} from "react-router-dom"
 import Home from './Pages/Home';
-import Compétences from './Pages/Compétences';
+import Competences from './Pages/Competences';
 
 const router = createBrowserRouter([
   {
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/competences",
-    element: <Compétences />,
+    element: <Competences />,
   },
   
 ]);
