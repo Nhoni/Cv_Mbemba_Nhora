@@ -2,12 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Nav() {
-
     return (
         <>
         <div className="navbar">
         <div className="logo">
-            <Link to="#/">
+            <Link to="/">
             <img src="src\assets\img\logo_p.png" alt="Logo portfolio" style={{ height: '50px' }} ></img></Link>
         </div>
         <div className="menu-toggle" id="menu-toggle">
@@ -25,6 +24,7 @@ function Nav() {
     </div>
         </>
     )
+    
 }
 
 export default Nav

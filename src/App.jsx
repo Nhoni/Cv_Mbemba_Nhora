@@ -1,3 +1,4 @@
+import Compétences from "./Pages/Compétences"
 import Home from "./Pages/Home"
 
 function App() {
@@ -5,7 +6,8 @@ function App() {
 
   return (
     <>
-    <Home/>
+    <Home />
+    <Compétences />
     </>
   )
 }
