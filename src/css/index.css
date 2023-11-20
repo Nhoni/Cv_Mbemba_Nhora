@@ -8,14 +8,16 @@
 
 body {
     font-family: 'Poppins', Arial, sans-serif;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 header {
     background-color: #333;
 }
 
-
+main{
+  height:90vh;
+}
 
 /*------------------------------------------------------ NavBar -------------------------------------------------------- */
 
@@ -40,6 +42,7 @@ li {
     width: 100%;
     top: 0;
     z-index: 100;
+    border-bottom: 2px solid gold
 }
 
 .menu-toggle {
@@ -234,6 +237,95 @@ a:hover {
 
 
 /*------------------------------------------------------ Accueil -------------------------------------------------------- */
+
+/* MonComposant.css */
+
+/* Styles pour la section "Accueil" */
+.content_acc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #222, #444);
+  color: #fff;
+}
+
+.acceuil-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.acceuil-section:hover {
+  transform: scale(1.05);
+}
+
+.accueil-content {
+  max-width: 60%;
+}
+
+.photo-profil img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.photo-profil img:hover {
+  transform: rotate(360deg);
+}
+
+/* Styles pour la section "À propos de moi" */
+.content_apropos {
+  background: linear-gradient(to left, #2b5876, #4e4376);
+  color: #fff;
+  padding: 50px 0;
+}
+
+.apropos-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.photos-p {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.photos-p img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+.photos-p img:hover {
+  transform: scale(1.1);
+}
+
+.apropos-section p {
+  max-width: 60%;
+  line-height: 1.6;
+}
+
+.apropos-section a {
+  color: #f3900ec7;
+}
+
+.apropos-section a:hover {
+  text-decoration: underline;
+}
+
+
 h1 {
     font-size: 52px;
     color: #fff;
@@ -242,7 +334,7 @@ h1 {
 .content_acc {
   text-align: center;
   padding: 50px;
-  background: url('../img/bg_portfolio.jpg') no-repeat center center fixed;
+  background: url('../assets/img/pexels-negative-space-160107.jpg') no-repeat center center fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -386,54 +478,52 @@ h1 {
 
 
 /*------------------------------------------------------ A propos -------------------------------------------------------- */
+
 .content_apropos {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 1rem;
-  padding: 10px;
-  background-color: #48454518;
+  height: 100vh;
+  background: linear-gradient(to left, #2b5876, #4e4376);
+  color: #fff;
+  text-align: center;
 }
 
 .apropos-section {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  text-align: left;
-  padding: 10px;
+  max-width: 800px;
+  width: 100%;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Styles pour les tablettes et écrans plus petits */
-@media (max-width: 1023px) {
-  .content_apropos {
-      margin: 0.5rem;
-      padding: 5px;
-  }
-
-  .apropos-section {
-      gap: 1rem; 
-      padding: 5px; 
-      flex-direction: column;
-      text-align: center;
-  }
+.photos-p {
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Styles pour les petits écrans (téléphones) */
-@media (max-width: 767px) {
-  .content_apropos {
-      margin: 0.3rem;
-      padding: 3px; 
-      
-  }
-
-  .apropos-section {
-      gap: 0.5rem;
-      padding: 3px;
-      flex-direction: column;
-      text-align: center;
-  }
+.photos-p img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
 }
 
+.photos-p img:hover {
+  transform: scale(1.1);
+}
+
+.apropos-section p {
+  line-height: 1.6;
+}
+
+.apropos-section a {
+  color: #f3900ec7;
+}
+
+.apropos-section a:hover {
+  text-decoration: underline;
+}
 /*------------------------------------------------------ Compétences -------------------------------------------------------- */
 .content_competences {
   display: flex;
