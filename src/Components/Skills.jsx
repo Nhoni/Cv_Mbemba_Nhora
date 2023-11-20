@@ -46,7 +46,7 @@ const competencesData = [
     ],
   },
   {
-    category: 'Infographie UI UX',
+    category: 'Design UI UX',
     skills: [
       { label: 'Canva', value: 80 },
       { label: 'Figma', value: 70 },
@@ -71,24 +71,25 @@ function Skills() {
       <h2>Mes Compétences</h2>
       <div className="competences-section">
 <div className='content'>
-      <div>
-      <h2>Mes Activités</h2>
-      <ul>
-        <li>Basketball</li>
-        <li>Danse</li>
-        <li>Musique</li>
-      </ul>
-    </div>
-
     <div>
-      <h2>skills</h2>
+      <h2>Compétences</h2>
       <ul>
         <li>Autonomie</li>
         <li>Travail d'équipe</li>
         <li>Gestion de projets</li>
       </ul>
     </div>
-    <a href="./img/ressources/MBEMBA_Nhora_Developpeuse_d'application_multimédia.pdf" download="">
+
+      <div>
+      <h2>Mes Activités</h2>
+      <ul>
+        <li>Danse</li>
+        <li>Musique</li>
+        <li>Basketball</li>
+      </ul>
+    </div>
+
+    <a href="src\assets\img\ressources\MBEMBA_Nhora_Developpeuse_d'application_multimédia.pdf" download="">
         <button className="roll-button" type="button" >
           Télécharger mon cv
         </button>

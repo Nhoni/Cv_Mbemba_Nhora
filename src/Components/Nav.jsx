@@ -1,30 +1,35 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Nav() {
-    return (
-        <>
-        <div className="navbar">
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <>
+      <div className={`navbar ${isMenuOpen ? 'open' : ''}`}>
         <div className="logo">
-            <Link to="/">
-            <img src="src\assets\img\logo_p.png" alt="Logo portfolio" style={{ height: '50px' }} ></img></Link>
+          <Link to="/">
+            <img src="src\assets\img\logo_p.png" alt="Logo portfolio" style={{ height: '50px' }} />
+          </Link>
         </div>
-        <div className="menu-toggle" id="menu-toggle">
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
+        <div className="menu-toggle" id="menu-toggle" onClick={handleToggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
         </div>
-        <ul className="menu" id="menu">
-        
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/competences">Compétences</Link></li>
-            <li><Link to="/portfolio">Portfolio</Link></li>
-            <li><Link to="/formulaire">Contact</Link></li>
+        <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
+          <li><Link to="/" onClick={handleToggleMenu}>Home</Link></li>
+          <li><Link to="/competences" onClick={handleToggleMenu}>Compétences</Link></li>
+          <li><Link to="/portfolio" onClick={handleToggleMenu}>Portfolio</Link></li>
+          <li><Link to="/contact" onClick={handleToggleMenu}>Contact</Link></li>
         </ul>
-    </div>
-        </>
-    )
-    
+      </div>
+    </>
+  );
 }
 
-export default Nav
+export default Nav;

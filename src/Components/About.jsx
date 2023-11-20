@@ -17,7 +17,7 @@ function About() {
               </a>
               . <br /> Suite à cette formation, j’ai eu envie d'en découvrir plus..<br /> <br />
               C'est pourquoi j'ai commencé cette année la formation de concepteur développeur d'applications chez{' '}
-              <a style={{ color: '#f3900ec7' }} href="" target="_blank" rel="noopener">
+              <a style={{ color: '#f3900ec7' }} href="https://www.prepavenir-formation.fr/cda-concepteur-dapplication-conventionnee/" target="_blank" rel="noopener">
                 Prepavenir-formation
               </a>
               .<br />J'aimerais me spécialiser dans le développement front-end.

@@ -4,6 +4,7 @@ import './css/index.css';
 import {createBrowserRouter,RouterProvider,} from "react-router-dom"
 import Home from './Pages/Home';
 import Competences from './Pages/Competences';
+import Contact from './Pages/Contact';
 
 const router = createBrowserRouter([
   {
@@ -14,11 +15,20 @@ const router = createBrowserRouter([
     path: "/competences",
     element: <Competences />,
   },
+  // {
+  //   path: "/portfolio",
+  //   element: <Portfolio />,
+  // },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
+  
   
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
