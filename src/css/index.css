@@ -13,8 +13,16 @@ header {
     background-color: #333;
 }
 
+.main{
 
+  background: linear-gradient(to left, #31688d, #6657a1);
+}
 
+h1 {
+  color: #fff;
+  font-size: 32px; 
+  text-align: center;
+}
 /*------------------------------------------------------ NavBar -------------------------------------------------------- */
 
 
@@ -395,10 +403,7 @@ a:hover {
 }
 
 
-h1 {
-    font-size: 52px;
-    color: #fff;
-}
+
 
 .content_acc {
   text-align: center;
@@ -503,10 +508,7 @@ h1 {
 }
 
 @media (max-width: 395px) {
-  h1 {
-    font-size: 32px; 
-  }
-
+ 
   .content_acc {
     padding: 20px;
     width: 403px;
@@ -554,7 +556,7 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to left, #2b5876, #4e4376);
+  background: linear-gradient(to left, #31688d, #6657a1);
   color: #fff;
   text-align: center;
 }
@@ -588,7 +590,7 @@ h1 {
 }
 
 .apropos-section a {
-  color: #f3900eda;
+  color: #f1f1f1da;
 }
 
 .apropos-section a:hover {
@@ -598,7 +600,6 @@ h1 {
 /* Styles pour la section de compétences */
 
 .content_competences {
-  background: url('../assets/img/pexels-tara-winstead-8386440.jpg');
   color: #fff;
   padding: 20px;
   height: 100vh;
@@ -694,8 +695,8 @@ li {
 
 /* Styles pour le bouton de téléchargement */
 .roll-button {
-  background-color: #b65709e2; /* Couleur de fond verte */
-  color: #fff; /* Couleur du texte claire */
+  background-color: goldenrod; /* Couleur de fond verte */
+  color: #fff; 
   padding: 15px 10px;
   font-size: 18px;
   text-decoration: none;
@@ -723,10 +724,87 @@ li {
     
   }
 
+/* ---------------------------------------------------Portfolio--------------------------------------------------- */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+}
 
-  /*------------------------------------------------------Formulaire-------------------------------------------------------- */
-  .container-form {
-  background: linear-gradient(to right, rgb(16, 90, 153), rgb(108, 148, 202), #5081B3);
+.project-card {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.project-details img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-details h2 {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project-details p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-container button:hover {
+  background-color: #217dbb;
+}
+
+/*------------------------------------------------------Formulaire-------------------------------------------------------- */
+.container-form {
+  background: linear-gradient(to left, #31688d, #6657a1);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -843,6 +921,11 @@ footer img:hover {
   text-align: center;
   padding: 20px;
   
+}
+
+.foot-icon a{
+  margin-right:1rem; 
+    
 }
 /* Règles de médias queries pour les tablettes (largeur d'écran entre 768px et 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {

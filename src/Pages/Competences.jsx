@@ -7,13 +7,10 @@ function Compétences() {
     return (
         <>
         <Nav/>
-        <main style={{ marginTop: '5rem',  height:'100vh'}}>
+        <main className='main' style={{ marginTop: '5rem',  height:'100vh'}}>
             <Skills />
         </main>
         <Footer />
-        
-        
-        
         </>
     )
 }

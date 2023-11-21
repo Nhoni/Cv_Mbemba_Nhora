@@ -20,7 +20,7 @@ function About() {
               <a style={{ color: '#f3900ec7' }} href="https://www.prepavenir-formation.fr/cda-concepteur-dapplication-conventionnee/" target="_blank" rel="noopener">
                 Prepavenir-formation
               </a>
-              .<br />J'aimerais me spécialiser dans le développement front-end.
+              .<br /> <br />J'aimerais me spécialiser dans le développement front-end par la suite.
             </p>
           </div>
         </div>

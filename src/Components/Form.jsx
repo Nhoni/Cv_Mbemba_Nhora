@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Icon } from '@iconify/react';
 function Form() {
   // Utilisation de useState pour gérer les valeurs des champs du formulaire
   const [formData, setFormData] = useState({
@@ -60,7 +60,7 @@ function Form() {
 
           <div className="foot_form">
             <p>
-              <iconify-icon icon="circum:mail"></iconify-icon> Mail: nhmbemba@gmail.com
+            <Icon icon="material-symbols:mail" color="white" width="24" />Mail: nhmbemba@gmail.com
             </p>
           </div>
         </form>
