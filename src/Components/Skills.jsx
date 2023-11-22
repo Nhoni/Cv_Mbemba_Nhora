@@ -41,8 +41,8 @@ const competencesData = [
   {
     category: 'Back-end',
     skills: [
-      { label: 'Symfony', value: 40 },
-      { label: 'PHP', value: 30 },
+      { label: 'Symfony', value: 35 },
+      { label: 'PHP', value: 25 },
     ],
   },
   {
