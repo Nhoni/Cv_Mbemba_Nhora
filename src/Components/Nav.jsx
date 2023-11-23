@@ -13,7 +13,7 @@ function Nav() {
       <div className={`navbar ${isMenuOpen ? 'open' : ''}`}>
         <div className="logo">
           <Link to="/">
-            <img src="src\assets\img\logo_p.jpg" alt="Logo portfolio" style={{ height: '50px' }} />
+            <img src="src/assets/img/logo_p.jpg" alt="Logo portfolio" style={{ height: '50px' }} />
           </Link>
         </div>
         <div className="menu-toggle" id="menu-toggle" onClick={handleToggleMenu}>
