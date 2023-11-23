@@ -67,7 +67,6 @@ function Skills() {
 
   return (
     <div className="content_competences" id="competences">
-      <h2>Mes Compétences</h2>
       <div className="competences-section">
         <div className='content'> 
 

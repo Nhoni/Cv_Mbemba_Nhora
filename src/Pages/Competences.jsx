@@ -10,7 +10,9 @@ function Competences() {
           <Nav />
         </header>
 
-        <main>
+        <main    style={{marginLeft: '2rem'}}>
+
+        <h1 style={{marginTop:'6rem'}}>Compétences</h1>
             <Skills />
         </main>
 

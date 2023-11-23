@@ -15,14 +15,13 @@ function Home() {
           <Nav />
       </header>
 
-      <main className='main'>
-           
+      <main>
               {afficherAccueil ? (
                 <div className="content_acc" id="accueil">
                   <div className="acceuil-section">
                     <div className="accueil-content">
                       <h1>MBEMBA Nhora</h1>
-                      <p className="text_accueil">Développeuse d'applications multimédia Junior  <br />Conceptrice développeuse d'applications Junior</p>
+                      <p className="text_accueil"> Conceptrice Développeuse d'Applications junior</p>
                       <button onClick={basculerSection} className="roll-button">
                         Qui suis-je ?
                       </button>
@@ -32,7 +31,6 @@ function Home() {
               ) : (
                 <About />
               )}
-           
       </main>
       
       <footer>

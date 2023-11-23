@@ -66,7 +66,7 @@ const Portfolio = () => {
 
             <main className='main'>
                 <div className='content-project'>
-                    <h1 style={{paddingTop:'0.75rem'}}>Mes Projets</h1>
+                    <h1 style={{marginTop:'6rem'}}>Mes Projets</h1>
                     <div className="project-container">
                         {projects.map((project) => (
                         <div
