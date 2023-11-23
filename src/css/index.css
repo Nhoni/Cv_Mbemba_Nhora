@@ -327,9 +327,7 @@ a:hover {
 
 
 /*---------------------------------------------------- A propos ------------------------------------------------*/
-#accueil{
-    margin-left: 2rem;
-  }
+
 .content_apropos {
   padding: 50px 0;
   display: flex;
@@ -340,7 +338,7 @@ a:hover {
   color: #fff;
   text-align: center;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .photos-p {
@@ -417,9 +415,9 @@ a:hover {
      margin-left: 1.5rem;
   }
 
-  .content_apropos {
+  /* .content_apropos {
     padding: 1rem;
-  }
+  } */
   
 }
 
