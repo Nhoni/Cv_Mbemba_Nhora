@@ -1,19 +1,25 @@
 import React from 'react'
 import Nav from '../Components/Nav'
-import Skills from '../Components/skills'
+import Skills from '../Components/Skills'
 import Footer from '../Components/Footer'
 
-function Compétences() {
+function Competences() {
     return (
         <>
-        <Nav/>
-        <main className='main' style={{ marginTop: '5rem',  height:'100vh'}}>
+        <header>
+          <Nav />
+        </header>
+
+        <main>
             <Skills />
         </main>
-        <Footer />
+
+        <footer>
+            <Footer />
+        </footer>
         </>
     )
 }
 
-export default Compétences;
+export default Competences;
         

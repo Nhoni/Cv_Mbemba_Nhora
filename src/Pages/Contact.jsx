@@ -7,14 +7,20 @@ function Contact() {
 
   return (
     <>
-        <Nav />
-            <main style={{ marginTop: '5rem', height: '100vh' }}>
-              <div className='container-form'>
-                <h2>Contact</h2>
-                <Form />
-                </div>
-            </main>
+      <header>
+          <Nav />
+      </header>
+
+      <main>
+          <div className='container-form'>
+            <h2>Contact</h2>
+              <Form />
+          </div>
+      </main>
+        
+      <footer>
         <Footer />
+      </footer>
     </>
     
   );

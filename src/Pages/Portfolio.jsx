@@ -23,7 +23,7 @@ const projects = [
     {
         id: 3,
         title: 'Le site sur lequel vous êtes',
-        imageUrl: '../src/assets/img/projects/Mon Portfolio.PNG',
+        imageUrl: '../src/assets/img/mon_portfolio_img.PNG',
         description: 'Mon portfolio qui retrace mon parcours ainsi que mes expériences, et compéttences que j\'ai pu acquérir au fil du temps',
         siteUrl: 'https://example.com/supakar',
     },
@@ -59,42 +59,48 @@ const Portfolio = () => {
   };
 
     return (
-    <>
-        <Nav />
-        <main className='main' style={{ marginTop: '5rem', height: '100vh' }}>
-            <div>
-                <h1 style={{paddingTop:'0.75rem'}}>Mes Projets</h1>
-                <div className="project-container">
-                    {projects.map((project) => (
-                    <div
-                        key={project.id}
-                        onClick={() => handleProjectClick(project)}
-                        className="project-card">
-                        <img src={project.imageUrl} alt={project.title} />
-                        <h3>{project.title}</h3>
+        <>
+            <header>
+                <Nav />
+            </header>
+
+            <main className='main'>
+                <div className='content-project'>
+                    <h1 style={{paddingTop:'0.75rem'}}>Mes Projets</h1>
+                    <div className="project-container">
+                        {projects.map((project) => (
+                        <div
+                            key={project.id}
+                            onClick={() => handleProjectClick(project)}
+                            className="project-card">
+                            <img src={project.imageUrl} alt={project.title} />
+                            <h3>{project.title}</h3>
+                        </div>
+                        ))}
                     </div>
-                    ))}
-                </div>
-                {selectedProject && (
-                    <div className="project-details">
-                    <h2>{selectedProject.title}</h2>
-                    <img
-                        src={selectedProject.imageUrl}
-                        alt={selectedProject.title}
-                    />
-                    <p>{selectedProject.description}</p>
-                    {selectedProject.siteUrl && (
-                        <button className='btn-portfolio' onClick={() => openProjectSite(selectedProject.siteUrl)}>
-                        <Icon icon="solar:link-line-duotone" color="black" width="12" /><br />
-                        voir le site
-                        </button>
+                    {selectedProject && (
+                        <div className="project-details">
+                        <h2>{selectedProject.title}</h2>
+                        <img
+                            src={selectedProject.imageUrl}
+                            alt={selectedProject.title}
+                        />
+                        <p>{selectedProject.description}</p>
+                        {selectedProject.siteUrl && (
+                            <button className='btn-portfolio' onClick={() => openProjectSite(selectedProject.siteUrl)}>
+                            <Icon icon="solar:link-line-duotone" color="black" width="12" /><br />
+                            voir le site
+                            </button>
+                        )}
+                        </div>
                     )}
-                    </div>
-                )}
-            </div>
-        </main>
-        <Footer />
-    </>
+                </div>
+            </main>
+
+            <footer>
+                <Footer />
+            </footer>
+        </>
     );
 };
 

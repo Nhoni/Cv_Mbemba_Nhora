@@ -9,27 +9,37 @@ function Home() {
     setAfficherAccueil(!afficherAccueil)};
 
     return (
+     
     <>
-      <Nav />
-      <div>
-      {afficherAccueil ? (
-        <div className="content_acc" id="accueil">
-          <div className="acceuil-section">
-            <div className="accueil-content">
-              <h1>MBEMBA Nhora</h1>
-              <p className="text_accueil">Développeuse d'applications multimédia Junior  <br />Conceptrice développeuse d'applications Junior</p>
-              <button onClick={basculerSection} className="roll-button">
-                Qui suis-je ?
-              </button>
-            </div>
-          </div>
-        </div>
-      ) : (
-       <About />
-      )}
-    </div>
-    <Footer />
+      <header>
+          <Nav />
+      </header>
+
+      <main className='main'>
+           
+              {afficherAccueil ? (
+                <div className="content_acc" id="accueil">
+                  <div className="acceuil-section">
+                    <div className="accueil-content">
+                      <h1>MBEMBA Nhora</h1>
+                      <p className="text_accueil">Développeuse d'applications multimédia Junior  <br />Conceptrice développeuse d'applications Junior</p>
+                      <button onClick={basculerSection} className="roll-button">
+                        Qui suis-je ?
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <About />
+              )}
+           
+      </main>
+      
+      <footer>
+          <Footer />
+      </footer>
     </>
+    
   )
 }
 
