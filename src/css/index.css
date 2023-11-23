@@ -690,6 +690,29 @@ progress::-webkit-progress-value {
 }
 
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px); /* Ajoutez cet effet de flou sur le fond */
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -704,6 +727,12 @@ progress::-webkit-progress-value {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
   }
 }
 
@@ -727,6 +756,17 @@ progress::-webkit-progress-value {
 
   .btn-portfolio {
     width: 100px;
+  }
+  .content-project {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    height: 100vh;
+  }
+  .project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }
 
