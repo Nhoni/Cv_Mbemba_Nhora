@@ -7,7 +7,7 @@ const projects = [
     {
         id: 1,
         title: 'Cinemax',
-        imageUrl: 'src\assets\img\Cinemax.jpg',
+        imageUrl: 'src/assets/img/Cinemax.jpg',
         description: 'Cinemax est une app de recherche de film et permet d\'ajouter une sélection en favoris.',
         siteUrl: 'https://cinemax-inky.vercel.app/',
     },
@@ -15,7 +15,7 @@ const projects = [
     {
         id: 2,
         title: 'ReactGpt',
-        imageUrl: 'src\assets\img\reactGpt.jpg',
+        imageUrl: 'src/assets/img/reactGpt.jpg',
         description: 'React GPT',
         siteUrl: 'https://cda-tp-validation-1.vercel.app/', 
     },
@@ -31,7 +31,7 @@ const projects = [
     {
         id: 4,
         title: 'Supakar',
-        imageUrl: 'src\assets\img\Supakar.jpg',
+        imageUrl: 'src/assets/img/Supakar.jpg',
         description: 'Un app React de personnalisations de voitures',
         siteUrl: 'https://supakar-pmmph9pdx-nhonis-projects.vercel.app/',
     },
@@ -39,7 +39,7 @@ const projects = [
     {
         id: 5,
         title: 'Portfolio',
-        imageUrl: 'src\assets\img\Portfolio_intégration.jpg',
+        imageUrl: 'src/assets/img/Portfolio_intégration.jpg',
         description: 'Un portfolio',
         siteUrl: 'https://portfolio-iota-one-22.vercel.app/',
     },
