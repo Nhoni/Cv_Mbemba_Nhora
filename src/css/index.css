@@ -703,6 +703,7 @@ progress::-webkit-progress-value {
   backdrop-filter: blur(10px); /* Ajoutez cet effet de flou sur le fond */
 }
 
+
 .modal-content {
   max-width: 80%;
   max-height: 80%;
